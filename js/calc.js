@@ -37,6 +37,10 @@ function getSum(materialType){
     return sum;
 }
 
+function getMaterialName(materialType){
+    return materialsNames.get(materialType);
+}
+
 function setTotal(materialType, width, height, sum){
     width_total.textContent = `длиной ${width} метров`;
     height_total.textContent = `высотой ${height} метров`;
@@ -54,4 +58,4 @@ function checkboxCheck(materialType, inputsValid){
     if (materialType != "none" && inputsValid) getSum(materialType);
 }
 
-export { getSum, keys, checkboxCheck, setTotal}
+export { getSum, keys, checkboxCheck, setTotal, getMaterialName}

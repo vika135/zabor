@@ -1,4 +1,4 @@
-import { getSum, keys, checkboxCheck, setTotal} from "./calc.js";  
+import { getSum, keys, checkboxCheck, setTotal, getMaterialName} from "./calc.js";  
 import { nextPrev } from "./steps.js";  
 import { PostData } from "./sendemail.js";  
 
@@ -84,10 +84,10 @@ send.onclick=function(){
     let letter = {
         to: "ptizza.music@yandex.ru",
         subject: "забор",
-        text: "hello from my site"
+        text: `Заказ ${orderNumber.textContent}:\n Вы заказали забор ${width}x${height} из материала ${getMaterialName(materialType)} общей стоимостью ${sum} рублей`
     }
     //console.log(JSON.stringify(letter))
-    //text: `Заказ ${orderNumber.textContent}:\n Вы заказали забор ${width}x${height} из материала ${materialType} общей стоимостью ${sum}`;
+    ;
     let res = PostData("sendmail", letter).then(
         result => console.log(result),
         error => console.log(error) 
