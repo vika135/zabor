@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/reset.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+      integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX"
+      crossorigin="anonymous"
+    />
+
+    <title>забор</title>
+  </head>
+  <body>
+    <!--<div class="main">-->
+
+      <!--Первая форма-->
+      <!---------------->
+
+      <div class="shown">
+        <div class="main">
+        <div class="headline">Заказать забор</div>
+        <div class="content">
+          <div class="caption">Длина забора</div>
+          <div class="input-group1">
+            <input
+              type="text"
+              id="width"
+              placeholder="0"
+              class="form-input"
+              maxlength="4"
+              minlength="1"
+            />
+            <div class="right-caption">метров</div>
+            <div class="is-ok invalid"></div>
+          </div>
+          <label for="width">Неверно заполнено поле</label>
+
+          <div class="caption">Высота забора</div>
+          <div class="input-group1">
+            <input
+              type="text"
+              id="height"
+              placeholder="0"
+              class="form-input"
+              maxlength="4"
+              minlength="1"
+            />
+            <div class="right-caption">метров</div>
+            <div class="is-ok invalid"></div>
+          </div>
+          <label for="height">Неверно заполнено поле</label>
+
+          <div class="caption">Материал забора</div>
+          <div class="dropdwn">
+            <button class="drpbtn" id="dropbutton">Выберите материал</button>
+            <div class="dropdwn-content">
+              <a href="#" id="none">Выберите материал</a>
+              <a href="#" id="profnastil">Профнастил 400 Р м<sup>2</sup></a>
+              <a href="#" id="moduli">Модули 500 Р м<sup>2</sup></a>
+              <a href="#" id="beton">Бетон 700 Р м<sup>2</sup></a>
+              <a href="#" id="setka">Сетка 200 Р м<sup>2</sup></a>
+            </div>
+          </div>
+
+          <div class="mounting">
+            <input
+              id="checkbox"
+              type="checkbox"
+              name="checkbox"
+              class="custom-checkbox"
+            />
+            <label for="checkbox">Нужен монтаж</label>
+          </div>
+
+          <div class="total">
+            Сумма заказа: <span class="sum" id="sum">0 ₽</span>
+          </div>
+
+          <!--<button class="btn-buy" id="next1" onclick="nextPrev(1)" disabled onclick="alert('asdfg')">
+            ДАЛЕЕ
+          </button>-->
+            <button class="btn-buy" id="next1" disabled>
+              ДАЛЕЕ
+            </button>
+        </div>
+      </div>
+      </div>
+
+
+      <!--Вторая форма-->
+      <!---------------->
+
+      <div class="hidden">
+        <div class="main">
+        <div class="headline">Пожалуйста, представьтесь</div>
+        <div class="content">
+          <div class="caption">Ваше имя</div>
+          <div class="input-group1">
+            <input
+              type="text"
+              id="name"
+              placeholder="Имя"
+              class="form-input"
+              maxlength="12"
+              minlength="1"
+            />
+            <div class="is-ok invalid"></div>
+          </div>
+          <label for="name">Неверно заполнено поле</label>
+
+          <div class="caption">Электронная почта</div>
+          <div class="input-group1">
+            <input
+              type="text"
+              id="email"
+              placeholder="E-mail"
+              class="form-input"
+              minlength="1"
+            />
+            <div class="is-ok invalid"></div>
+          </div>
+          <label for="email">Неверно заполнено поле</label>
+
+          <div class="caption">Телефон</div>
+
+          <div class="input-group1">
+            <input
+              type="text"
+              id="tel"
+              placeholder="+7 "
+              class="form-input"
+              minlength="11"
+            />
+            <div class="is-ok invalid"></div>
+          </div>
+          <label for="tel">Неверно заполнено поле</label>
+
+          <div class="width-height-material-total" >
+            Вы укомплектовали забор  <span id="width-total"> </span>
+             и <span id="height-total"> </span>
+             из материала <span id="material-total"> </span>
+              на сумму <span id="sum-total" class="sum-total"> </span>
+          </div>
+          <button class="btn-send" id="send" disabled>
+            ОТПРАВИТЬ
+          </button>
+          
+        </div>
+        
+      </div>
+      </div>
+
+      <!--Третья форма-->
+      <!---------------->
+
+      <div class="hidden">
+        <!--<div class="main">-->
+        <div class="order-isdone">
+          <div class="headline" >  
+            <span id="order-isdone-name"></span><br />
+            заказ <span class="order-number" id="order-number"> </span> сформирован! 
+          </div>
+
+          <div class="feedback">
+            Мы повторили его комплектацию на почту
+              <div class="email" id="getemail" ></div><br />
+            В ближайшее время наш специалист свяжется с вами по телефону 
+              <div class="tel-number">+7 (917) 111-22-33</div>
+          </div>
+        </div>
+        <div class="hidden-part">
+            <!--Эта часть спрятана, чтобы последний попап был на такой же высоте, как и предыдущие два окна-->
+        </div>
+      <!--</div>-->
+      </div>
+
+
+    <!--</div>-->
+
+    <script src="./js/sendemail.js" type="module"></script>
+    <script src="./js/calc.js" type="module"></script>
+    <script src="./js/validation.js" type="module"></script>
+    <script src="./js/steps.js" type="module"></script>
+    
+  </body>
+</html>
