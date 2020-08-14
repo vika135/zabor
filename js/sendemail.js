@@ -1,6 +1,8 @@
 async function PostData(type, userData) {
     //let BaseURL = 'http://localhost:3000/';
+    //let BaseURL = 'http://localhost:8080/'; 
     let BaseURL = 'https://buy-zabor.ew.r.appspot.com/';
+    
   
     return new Promise((resolve, reject) =>{
         const headers = new Headers({
@@ -11,7 +13,6 @@ async function PostData(type, userData) {
             method: 'POST',
             headers: headers,
             body: JSON.stringify(userData)
-            //body: userData
           })
           .then((response) => response.json())
           .then((res) => {

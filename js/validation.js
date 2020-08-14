@@ -82,8 +82,8 @@ send.onclick=function(){
     emailElem.textContent = `${email}`;
 
     let letter = {
-        to: "ptizza.music@yandex.ru",
-        subject: "забор",
+        to: email,
+        subject: "заборрр",
         text: `Заказ ${orderNumber.textContent}:\n Вы заказали забор ${width}x${height} из материала ${getMaterialName(materialType)} общей стоимостью ${sum} рублей`
     }
     //console.log(JSON.stringify(letter))
