@@ -52,7 +52,6 @@ body {
     padding-top: 39px;    
   }
 
-
   .order-isdone{
     text-align: center;
     /* margin: 0 auto; */
@@ -106,15 +105,37 @@ body {
     padding-left: 14px;
   }
 
+  @media (max-width: 490px) {
+      input.form-input {
+      width:70%;
+    }
+    .main{
+      width:100vw;
+    }
+    .button.drpbtn,  button.drpbtn:focus{
+      width:70%;
+    }
+  }
+
+  @media (min-width: 490px) {
+    input.form-input {
+      width:230px;
+    }
+    .button.drpbtn,  button.drpbtn:focus{
+      width: 319px;
+    }
+  }
+
   input.form-input#name,
   input.form-input#email,
   input.form-input#tel {
     width:310px;
   }
 
+
   input.form-input,
   input:not([type="submit"]):valid{
-    width:230px;
+    
     height: 50px;
     border-color: #D7D7D7;
     background: linear-gradient(180deg, #F8F8F8 0%, rgba(243, 243, 243, 0) 100%, #F2F2F2 100%);
@@ -146,8 +167,8 @@ button.drpbtn,  button.drpbtn:focus{
     box-sizing: border-box;
     border-radius: 3px;
     outline: none;
-    width: 319px;
     height: 50px;
+    font-size: 18px;
 }
 
 .dropdwn {
@@ -159,7 +180,7 @@ button.drpbtn,  button.drpbtn:focus{
     display: none;
     position: absolute;
     background-color: white;
-    min-width: 160px;
+    /*min-width: 160px;*/
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -175,6 +196,7 @@ button.drpbtn,  button.drpbtn:focus{
     background: rgba(59, 129, 215, 0.15);
     text-decoration: none;
     color: #646464;
+    cursor: pointer; 
 }
 
 .dropdwn-content a:active{
@@ -234,7 +256,7 @@ button.drpbtn,  button.drpbtn:focus{
 
   .total {
     height: 26px;
-    padding-top: 8px;
+    padding-top: 31px;
     margin-bottom: 30px;
     font-size: 24px;
     line-height: 33px;
