@@ -11,13 +11,7 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    background-color: #464646;
-
-    position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%); 
+    background-color: #464646; 
   }
 
   .is-ok{
@@ -85,8 +79,7 @@ body {
     padding-top: 31px;
     font-size: 18px;
     line-height: 25px;
-    width: 402px;
-    margin: 0 auto;
+    text-align: center;
   }
 
 
@@ -122,7 +115,7 @@ body {
     } 
     .main{
       width:100vw;
-      height: 80vh;
+      height: 645px;
       align-items: center;
     }
     .dropdwn{
@@ -133,6 +126,7 @@ body {
     }
     .content{
       margin-left: 0;
+      height: 100%;
       /* display:flex;
       flex-direction: column;
       justify-content: center;
@@ -141,9 +135,23 @@ body {
     button.btn-buy{
       position: relative;
     }
+    .order-isdone{
+      width:100vw;
+      height: 100vh;
+    }
+    .hidden-part{
+      height: 0;
+    }
   }
 
   @media (min-width: 490px) {
+    body{
+      position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%); 
+    }
     input.form-input {
       width:230px;
     }
@@ -161,6 +169,10 @@ body {
     }
     button.btn-buy{
       position: relative;
+    }
+    .feedback{
+      width: 402px;
+      margin: 0 auto;
     }
   }
 
