@@ -106,14 +106,40 @@ body {
   }
 
   @media (max-width: 490px) {
-      input.form-input {
-      width:70%;
+    body{
+      margin: 0;
     }
+      input.form-input {
+      width:90%;
+    }
+    input.form-input#name,
+    input.form-input#email,
+    input.form-input#tel{
+      width:100%;
+    } 
+    .input-group1{
+      width:90vw;
+    } 
     .main{
       width:100vw;
+      /* height: 100vh; */
+      align-items: center;
     }
-    .button.drpbtn,  button.drpbtn:focus{
-      width:70%;
+    .dropdwn{
+      width:90%;
+    }
+    .drpbtn{
+      width: 100%
+    }
+    .content{
+      margin-left: 0;
+      /* display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; */
+    }
+    button.btn-buy{
+      position: relative;
     }
   }
 
@@ -121,16 +147,28 @@ body {
     input.form-input {
       width:230px;
     }
-    .button.drpbtn,  button.drpbtn:focus{
+    input.form-input#name,
+    input.form-input#email,
+    input.form-input#tel{
+      width:310px;
+    }
+    button.drpbtn,  button.drpbtn:focus{
       width: 319px;
+    }
+    .btn-send{
+      position: absolute;
+      left: 130px;
+    }
+    button.btn-buy{
+      position: relative;
     }
   }
 
-  input.form-input#name,
+  /*input.form-input#name,
   input.form-input#email,
   input.form-input#tel {
-    width:310px;
-  }
+    
+  } */
 
 
   input.form-input,
@@ -169,6 +207,7 @@ button.drpbtn,  button.drpbtn:focus{
     outline: none;
     height: 50px;
     font-size: 18px;
+    /* width: 319px; */
 }
 
 .dropdwn {
@@ -273,8 +312,7 @@ button.drpbtn,  button.drpbtn:focus{
     height: 50px;
     background: #2F79D4;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-    display: inline-block; 
-    position: relative;
+    display: inline-block;
     border: 1px solid #D7D7D7;
     box-sizing: border-box;
     border-radius: 7px 3px 2px 7px;
@@ -289,9 +327,6 @@ button.drpbtn,  button.drpbtn:focus{
     background: linear-gradient(180deg, #4892EC 0%, #2F79D4 100%);
     border: 1px solid #226DC8;
     width: 230px;
-    /* margin: 0 auto; */
-    position: absolute;
-    left: 130px;
   }
   
   .btn-buy:after, .btn-buy:before{

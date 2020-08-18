@@ -13,7 +13,7 @@ let inputsValid = false;
 let dropbuttonValid = false;
 let materialType = "none";
 let width = 0, height = 0, sum = 0;
-let name, email;
+let name, email, tel;
 
 checkValidity();
 
@@ -76,10 +76,11 @@ send.onclick=function(){
     let headlineName = document.getElementById('order-isdone-name');
     let orderNumber = document.getElementById('order-number');
     let emailElem = document.getElementById('getemail');
-    //console.log(emailElem );
+    let telElem = document.getElementById('gettel');
     headlineName.textContent = `${name},`;
     orderNumber.textContent = `№ ${getRandomOrderNumber()}`;
     emailElem.textContent = `${email}`;
+    telElem.textContent = `${tel}`;
 
     let letter = {
         to: email,
@@ -146,9 +147,12 @@ function checkNameValidity(input){
 }
 
 function checkTelValidity(input){
-    let tel = input.value;
+    let isValid;
+    let value = input.value;
     const re = /^(\+7|8)? ?(\d{3})(\d{3})(\d{2})(\d{2})$/; //+7(8)1234567890 +7(8) 1234567890
-    return re.test(String(tel).toLowerCase());
+    isValid = re.test(String(value));
+    if (isValid) tel = value;
+    return isValid;
 }
 //#endregion
 
